@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>For My BIVI 💋</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+html,body{
+  height:100%;
+  font-family:'Poppins',sans-serif;
+  overflow:hidden;
+  background:#fff;
+}
+
+.swiper{
+  height:100vh;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+
+section{
+  height:100vh;
+  scroll-snap-align:start;
+  padding:40px 26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+}
+
+/* dreamy blur layer */
+section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  backdrop-filter:blur(1.5px);
+  z-index:0;
+}
+
+section > *{
+  position:relative;
+  z-index:1;
+}
+
+h1,h2{
+  font-family:'Playfair Display',serif;
+  color:#7a1020;
+}
+
+p{
+  font-size:1.08rem;
+  line-height:1.9;
+  color:#5a1a22;
+  max-width:540px;
+}
+
+/* dreamy gradients */
+.bg1{background:linear-gradient(135deg,#ffd6e8,#fff1f7)}
+.bg2{background:linear-gradient(135deg,#ffeef5,#ffdbe6)}
+.bg3{background:linear-gradient(135deg,#ffe3ec,#fff7fa)}
+.bg4{background:linear-gradient(135deg,#fff5f7,#ffd6dc)}
+.bg5{background:linear-gradient(135deg,#ffdbe6,#fff1f4)}
+
+/* glow */
+.glow{
+  animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+  from{transform:scale(1)}
+  to{transform:scale(1.05)}
+}
+
+/* 💋 KISS FLOATING ANIMATION */
+.kiss{
+  position:fixed;
+  bottom:-30px;
+  font-size:26px;
+  animation:kissFloat linear infinite;
+  pointer-events:none;
+  filter:drop-shadow(0 0 6px rgba(255,105,135,.6));
+}
+
+@keyframes kissFloat{
+  to{
+    transform:translateY(-120vh) translateX(40px) scale(1.4);
+    opacity:0;
+  }
+}
+
+/* kiss button */
+.kiss-btn{
+  margin-top:26px;
+  padding:14px 34px;
+  border-radius:40px;
+  border:none;
+  background:#c9184a;
+  color:white;
+  font-size:1.05rem;
+}
+
+/* music overlay */
+#musicOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(255,230,240,.97);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+#musicOverlay button{
+  margin-top:18px;
+  padding:14px 30px;
+  border:none;
+  border-radius:30px;
+  background:#c9184a;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div id="musicOverlay">
+  <h2>For my BIVI 💖</h2>
+  <p>Tap once… feel the closeness 💋</p>
+  <button onclick="startMusic()">Start</button>
+</div>
+
+<div class="swiper">
+
+<!-- PAGE 1 -->
+<section class="bg1 glow">
+  <h1>Happy Kiss Day 💋</h1>
+  <p>For my BIVI…<br>this is soft, slow, and only for you.</p>
+</section>
+
+<!-- PAGE 2 -->
+<section class="bg2">
+  <h2>What Kiss Day Feels Like</h2>
+  <p>
+    Warm.  
+    Close.  
+    Like the world pauses for a second.
+  </p>
+</section>
+
+<!-- PAGE 3 -->
+<section class="bg3">
+  <h2>For My BIVI 💗</h2>
+  <p>
+    Every time I think of you,  
+    my heart leans a little closer.
+  </p>
+</section>
+
+<!-- PAGE 4 -->
+<section class="bg4">
+  <h2>Soft Moments</h2>
+  <p>
+    The gentle ones.  
+    The quiet ones.  
+    The ones that stay.
+  </p>
+</section>
+
+<!-- PAGE 5 -->
+<section class="bg5">
+  <h2>If I Kissed You Now…</h2>
+  <p>
+    It would be slow,  
+    full of care,  
+    and meant only for you.
+  </p>
+</section>
+
+<!-- PAGE 6 -->
+<section class="bg2">
+  <h2>Send a Kiss 💋</h2>
+  <button class="kiss-btn" onclick="sendKiss()">Send Kiss</button>
+</section>
+
+<!-- PAGE 7 -->
+<section class="bg3">
+  <h2>What Do I Call You?</h2>
+  <input id="nameInput" placeholder="my favorite name"
+    style="padding:12px;border-radius:12px;border:1px solid #ccc">
+  <button class="kiss-btn" onclick="check()">Submit</button>
+</section>
+
+<!-- PAGE 8 -->
+<section class="bg4">
+  <h2>Little Truth 🤍</h2>
+  <p>
+    The safest place for me  
+    is right next to you.
+  </p>
+</section>
+
+<!-- PAGE 9 -->
+<section class="bg5">
+  <h2>One More Kiss</h2>
+  <p>
+    If kisses could cross screens,  
+    you’d feel this one.
+  </p>
+</section>
+
+<!-- PAGE 10 -->
+<section class="bg1 glow">
+  <h1>💋 For My BIVI 💋</h1>
+  <p>
+    Happy Kiss Day.  
+    Always yours.
+  </p>
+</section>
+
+</div>
+
+<script>
+function startMusic(){
+  document.getElementById("bgMusic").play().then(()=>{
+    document.getElementById("musicOverlay").style.display="none";
+  });
+}
+
+/* continuous kiss animation */
+setInterval(()=>{
+  const k=document.createElement("div");
+  k.className="kiss";
+  k.innerText="💋";
+  k.style.left=Math.random()*100+"vw";
+  k.style.animationDuration=(5+Math.random()*3)+"s";
+  document.body.appendChild(k);
+  setTimeout(()=>k.remove(),8000);
+},600);
+
+/* kiss button burst */
+function sendKiss(){
+  for(let i=0;i<6;i++){
+    setTimeout(()=>createKiss(),i*120);
+  }
+}
+
+function createKiss(){
+  const k=document.createElement("div");
+  k.className="kiss";
+  k.innerText="💋";
+  k.style.left=Math.random()*100+"vw";
+  k.style.animationDuration="4s";
+  document.body.appendChild(k);
+  setTimeout(()=>k.remove(),5000);
+}
+
+/* name check */
+function check(){
+  const v=document.getElementById("nameInput").value.toLowerCase();
+  if(v==="bivi"){
+    alert("💖 Always my BIVI 💖");
+  }else{
+    alert("Try again 😛");
+  }
+}
+
+/* Easter egg */
+let taps=0;
+document.body.addEventListener("click",()=>{
+  taps++;
+  if(taps===28){
+    alert("💋 I’m always kissing you in my thoughts, BIVI 💋");
+  }
+});
+</script>
+
+</body>
+</html>
